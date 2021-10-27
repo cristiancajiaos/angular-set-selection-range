@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
+  cursorPosition = 0;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  setCursorPosition(event: any, el): void {
+    console.log('setCursorPointer()');
+  }
+
+  foo(el: any): void {
+    console.log('foo()');
+    el.focus();
+    el.setSelectionRange(2, 2);
+  }
 }
